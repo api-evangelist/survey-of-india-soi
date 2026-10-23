@@ -1,23 +1,58 @@
 aid: survey-of-india-soi
+
 name: Survey of India (SoI)
+
 description: 'Survey of India (SoI) is a company surfaced via the API Evangelist harvest backlog (source:
   vc-portfolio) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/survey-of-india-soi/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/survey-of-india-soi-hosts.yml
+- type: DomainSecurity
+  url: security/survey-of-india-soi-domain-security.yml
 - type: Website
   url: http://www.surveyofindia.gov.in
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: http://www.surveyofindia.gov.in
+    status: null
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
